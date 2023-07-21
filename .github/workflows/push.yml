@@ -12,7 +12,7 @@ jobs:
         uses: duplocloud/ghactions-aws-jit@master
         with:
           duplo_host: https://test19.duplocloud.net
-          duplo_token: ${{ secrets.DUPLO_TOKEN }}
+          duplo_token: FAKE_TOKEN_FOR_TESTING
           tenant: default
       - name: list-s3
         run: aws s3 ls
