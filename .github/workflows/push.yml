@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: aws-jit
-        uses: duplocloud/ghactions-aws-jit@develop
+        uses: duplocloud/ghactions-aws-jit@release/0.3.3
         with:
           duplo_host: https://test19.duplocloud.net
           duplo_token: FAKE_TOKEN_FOR_TESTING
