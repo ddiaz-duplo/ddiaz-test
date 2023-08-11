@@ -2,7 +2,8 @@ name: Push - AWS JIT
 on:
   workflow_dispatch:
   push:
-    - '.github/workflows/push-aws-jit.yml'
+    paths:
+      - '.github/workflows/push-aws-jit.yml'
 jobs:
   deploy:
     # This example get AWS credentials, then lists all S3 buckets.

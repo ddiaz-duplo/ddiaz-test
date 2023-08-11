@@ -1,7 +1,8 @@
 name: Push - Service Update
 on:
   push:
-    '.github/workflows/push-service-update.yml'
+    paths:
+      - '.github/workflows/push-service-update.yml'
 jobs:
   deploy:
     # This example updates a service named "nginx" to use an image "nginx:latest"
