@@ -1,7 +1,8 @@
-name: Push
+name: Push - AWS JIT
 on:
   workflow_dispatch:
   push:
+    - '.github/workflows/push-aws-jit.yml'
 jobs:
   deploy:
     # This example get AWS credentials, then lists all S3 buckets.
@@ -9,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: aws-jit
-        uses: duplocloud/ghactions-aws-jit@release/0.3.3
+        uses: duplocloud/ghactions-aws-jit@master
         with:
           duplo_host: https://test19.duplocloud.net
           duplo_token: ${{ secrets.DUPLO_TOKEN }}

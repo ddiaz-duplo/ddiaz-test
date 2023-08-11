@@ -1,0 +1,20 @@
+name: Push - Service Update
+on:
+  push:
+    '.github/workflows/push-service-update.yml'
+jobs:
+  deploy:
+    # This example updates a service named "nginx" to use an image "nginx:latest"
+    name: Deploy with DuploCloud
+    runs-on: ubuntu-latest
+    steps:
+      - name: service-update
+        uses: duplocloud/ghactions-service-update@master
+        with:
+          duplo_host: https://test19.duplocloud.net
+          duplo_token: ${{ secrets.DUPLO_TOKEN }}
+          tenant: default
+          ecs_services: |-
+            [
+              { "Name": "tf-eksnlb1", "IsAnyHostAllowed": true }
+            ]
