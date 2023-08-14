@@ -17,5 +17,5 @@ jobs:
           tenant: default
           ecs_services: |-
             [
-              { "Name": "ecsName", "Image": "nginx:latest" }
+              { "Name": "ecsecs", "Image": "nginx:latest" }
             ]
