@@ -15,7 +15,7 @@ jobs:
           duplo_host: https://test19.duplocloud.net
           duplo_token: ${{ secrets.DUPLO_TOKEN }}
           tenant: default
-          services: |-
+          ecs_services: |-
             [
-              { "Name": "tf-eksnlb1", "IsAnyHostAllowed": true }
+              { "Name": "duploservices-default-ecsName", "Image": "nginx:latest" }
             ]
