@@ -17,5 +17,5 @@ jobs:
           tenant: default
           ecs_services: |-
             [
-              { "Name": "duploservices-default-ecsName", "Image": "nginx:latest" }
+              { "Name": "ecsName", "Image": "nginx:latest" }
             ]
