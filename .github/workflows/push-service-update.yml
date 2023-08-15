@@ -30,5 +30,5 @@ jobs:
           tenant: EKS-TENANT
           ecs_services: |-
             [
-              { "Name": "ecs01", "Image": "nginx:1.25.1" }
+              { "Name": "ddecs", "Image": "nginx:1.25.1" }
             ]
