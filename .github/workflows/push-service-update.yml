@@ -5,7 +5,6 @@ on:
       - '.github/workflows/push-service-update.yml'
 jobs:
   deploy:
-    # This example updates a service named "nginx" to use an image "nginx:latest"
     name: Deploy with DuploCloud
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +19,6 @@ jobs:
               { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" }
             ]
   deploy-ecs:
-    # This example updates a service named "nginx" to use an image "nginx:latest"
     name: Update ECS
     runs-on: ubuntu-latest
     steps:
@@ -32,5 +30,5 @@ jobs:
           tenant: EKS-TENANT
           ecs_services: |-
             [
-              { "Name": "duploservices-eks-tenant-ecsservice", "Image": "nginx:1.25.1" }
+              { "Name": "ecsservice", "Image": "nginx:1.25.1" }
             ]
