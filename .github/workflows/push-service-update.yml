@@ -5,7 +5,7 @@ on:
       - '.github/workflows/push-service-update.yml'
 jobs:
   deploy:
-    name: Deploy with DuploCloud
+    name: Update EKS service
     runs-on: ubuntu-latest
     steps:
       - name: service-update
@@ -19,7 +19,7 @@ jobs:
               { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" }
             ]
   deploy-ecs:
-    name: Update ECS
+    name: Update ECS service
     runs-on: ubuntu-latest
     steps:
       - name: service-update
@@ -30,5 +30,5 @@ jobs:
           tenant: EKS-TENANT
           ecs_services: |-
             [
-              { "Name": "ecsservice", "Image": "nginx:1.25.1" }
+              { "Name": "ecs01", "Image": "nginx:1.25.1" }
             ]
