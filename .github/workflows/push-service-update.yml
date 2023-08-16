@@ -17,7 +17,7 @@ jobs:
           services: |-
             [
               { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" },
-              { "Name": "ui-eks", "Image": "nginx:1.25" },
+              { "Name": "ui-eks", "Image": "nginx:1.25" }
             ]
           ecs_services: |-
             [
