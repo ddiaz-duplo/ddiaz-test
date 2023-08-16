@@ -5,7 +5,7 @@ on:
       - '.github/workflows/push-service-update.yml'
 jobs:
   deploy:
-    name: Update EKS service
+    name: Update services
     runs-on: ubuntu-latest
     steps:
       - name: service-update
@@ -19,20 +19,6 @@ jobs:
               { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" },
               { "Name": "ui-eks", "Image": "nginx:1.25" }
             ]
-          ecs_services: |-
-            [
-              { "Name": "ddservice", "Image": "nginx:1.25" }
-            ]
-  deploy-ecs:
-    name: Update ECS service
-    runs-on: ubuntu-latest
-    steps:
-      - name: service-update
-        uses: duplocloud/ghactions-service-update@master
-        with:
-          duplo_host: https://test19.duplocloud.net
-          duplo_token: ${{ secrets.DUPLO_TOKEN }}
-          tenant: EKS-TENANT
           ecs_services: |-
             [
               { "Name": "ddservice", "Image": "nginx:1.25" }
