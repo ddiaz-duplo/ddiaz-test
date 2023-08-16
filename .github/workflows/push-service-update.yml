@@ -16,7 +16,12 @@ jobs:
           tenant: EKS-TENANT
           services: |-
             [
-              { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" }
+              { "Name": "tf-eksnlb1", "Image": "nginx:1.25.1" },
+              { "Name": "ui-eks", "Image": "nginx:1.25" },
+            ]
+          ecs_services: |-
+            [
+              { "Name": "ddservice", "Image": "nginx:1.25" }
             ]
   deploy-ecs:
     name: Update ECS service
